@@ -1,4 +1,4 @@
-import { COMPANY, FINAL_CTA } from '../../data/site'
+import { COMPANY, FINAL_CTA, QUOTE_ROUTE } from '../../data/site'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { Button } from '../ui/Button'
 
@@ -9,7 +9,7 @@ export function FinalCta() {
     <section
       id="contact"
       ref={ref}
-      className="relative overflow-hidden border-t border-white/[0.05] bg-bg py-24 sm:py-28 lg:py-32"
+      className="relative overflow-hidden border-t border-white/[0.05] bg-bg py-16 sm:py-24 lg:py-32"
       aria-labelledby="contact-heading"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
@@ -21,7 +21,7 @@ export function FinalCta() {
 
       <div className="relative z-10 mx-auto max-w-[900px] px-5 text-center sm:px-8">
         <div
-          className={`mb-10 flex items-center justify-center gap-5 transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mb-12 ${
+          className={`mb-7 flex items-center justify-center gap-5 transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mb-12 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
@@ -34,7 +34,7 @@ export function FinalCta() {
 
         <h2
           id="contact-heading"
-          className={`font-display text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.08] tracking-tight text-text transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`font-display text-[clamp(1.625rem,5vw,3.5rem)] font-black leading-[1.12] tracking-tight text-text transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}
           style={{ transitionDelay: '120ms' }}
@@ -43,7 +43,7 @@ export function FinalCta() {
         </h2>
 
         <p
-          className={`mx-auto mt-7 max-w-2xl text-base font-extralight leading-[1.9] text-muted transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-8 sm:text-[1.0625rem] ${
+          className={`mx-auto mt-5 max-w-2xl text-[0.9375rem] font-extralight leading-[1.75] text-muted transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-8 sm:text-[1.0625rem] sm:leading-[1.9] ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
           style={{ transitionDelay: '240ms' }}
@@ -63,33 +63,38 @@ export function FinalCta() {
         </div>
 
         <div
-          className={`mt-10 flex flex-col items-center justify-center gap-4 transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-12 sm:flex-row sm:gap-5 ${
+          className={`mt-7 flex w-full flex-col items-stretch justify-center gap-3 transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-12 sm:w-auto sm:flex-row sm:items-center sm:gap-5 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
           style={{ transitionDelay: '400ms' }}
         >
-          <Button variant="primary" as="a" href="#contact" className="w-full sm:w-auto">
+          <Button
+            variant="primary"
+            as="a"
+            href={QUOTE_ROUTE}
+            className="w-full !px-6 !py-3.5 !text-xs sm:w-auto sm:!py-4 sm:!text-[0.8125rem]"
+          >
             {FINAL_CTA.primaryCta}
           </Button>
           <Button
             variant="secondary"
             as="a"
             href={COMPANY.phoneHref}
-            className="w-full sm:w-auto"
+            className="w-full !px-6 !py-3.5 !text-xs sm:w-auto sm:!py-4 sm:!text-[0.8125rem]"
           >
             {FINAL_CTA.secondaryCta}
           </Button>
         </div>
 
         <div
-          className={`mt-12 transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-14 ${
+          className={`mt-8 transition-[opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:mt-14 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`}
           style={{ transitionDelay: '520ms' }}
         >
           <a
             href={COMPANY.phoneHref}
-            className="text-lg font-light tracking-[0.06em] text-text/90 transition-colors duration-300 hover:text-gold sm:text-xl"
+            className="text-base font-light tracking-[0.06em] text-text/90 transition-colors duration-300 hover:text-gold sm:text-xl"
             dir="ltr"
           >
             {COMPANY.phone}

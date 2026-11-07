@@ -23,7 +23,7 @@ export function ProjectCard({ name, location, area, image, href }: ProjectCardPr
           <div className="absolute inset-0 bg-bg/10 transition-colors duration-500 group-hover:bg-transparent" />
         </div>
 
-        <div className="relative -mt-24 px-6 pb-8 pt-16 sm:px-7 sm:pb-9">
+        <div className="relative -mt-20 px-5 pb-6 pt-14 sm:-mt-24 sm:px-7 sm:pb-9 sm:pt-16">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-gold/70 transition-all duration-500 group-hover:w-12" />
             <span className="text-[0.65rem] font-light tracking-[0.2em] text-gold/80 uppercase">
@@ -31,7 +31,7 @@ export function ProjectCard({ name, location, area, image, href }: ProjectCardPr
             </span>
           </div>
 
-          <h3 className="font-display text-2xl font-bold tracking-tight text-text transition-colors duration-300 group-hover:text-text sm:text-[1.65rem]">
+          <h3 className="font-display text-xl font-bold tracking-tight text-text transition-colors duration-300 group-hover:text-text sm:text-[1.65rem]">
             {name}
           </h3>
 

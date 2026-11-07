@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { COMPANY, NAV_ITEMS } from '../../data/site'
+import { Link } from 'react-router-dom'
+import { COMPANY, NAV_ITEMS, QUOTE_ROUTE } from '../../data/site'
 import { Button } from '../ui/Button'
 
 interface MobileMenuProps {
@@ -32,7 +33,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-label="תפריט ניווט נייד"
         aria-hidden={!isOpen}
       >
-        <div className="flex items-center justify-between border-b border-white/[0.05] px-7 py-6">
+        <div className="flex h-[60px] items-center justify-between border-b border-white/[0.05] px-5 sm:px-7">
           <div className="flex flex-col gap-0.5">
             <span className="font-brand text-2xl font-light tracking-[0.3em] text-text">
               {COMPANY.name}
@@ -53,13 +54,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </button>
         </div>
 
-        <ul className="flex flex-1 flex-col gap-0.5 px-5 py-10">
+        <ul className="flex flex-1 flex-col gap-0 px-4 py-8 sm:px-5 sm:py-10">
           {NAV_ITEMS.map((item, index) => (
             <li key={item.href}>
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 onClick={onClose}
-                className={`block border-b border-white/[0.03] px-3 py-5 text-[1.125rem] font-extralight tracking-wide text-muted transition-all duration-300 hover:pr-5 hover:text-text ${
+                className={`block border-b border-white/[0.03] px-3 py-4 text-[1.0625rem] font-extralight tracking-wide text-muted transition-all duration-300 hover:pr-5 hover:text-text sm:py-5 sm:text-[1.125rem] ${
                   isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
                 }`}
                 style={{ transitionDelay: isOpen ? `${100 + index * 50}ms` : '0ms' }}
@@ -68,12 +69,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   0{index + 1}
                 </span>
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        <div className="flex flex-col gap-5 border-t border-white/[0.05] px-7 pb-12 pt-8">
+        <div className="flex flex-col gap-4 border-t border-white/[0.05] px-6 pb-10 pt-7 sm:gap-5 sm:px-7 sm:pb-12 sm:pt-8">
           <a
             href={COMPANY.phoneHref}
             className="text-center text-sm font-light tracking-[0.1em] text-muted transition-colors hover:text-gold"
@@ -81,7 +82,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           >
             {COMPANY.phone}
           </a>
-          <Button variant="primary" as="a" href="#contact" className="w-full" onClick={onClose}>
+          <Button variant="primary" as="a" href={QUOTE_ROUTE} className="w-full" onClick={onClose}>
             קבלת הצעת מחיר
           </Button>
         </div>

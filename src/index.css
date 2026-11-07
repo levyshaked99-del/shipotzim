@@ -6,15 +6,23 @@
 @source "./components/sections/Hero.tsx";
 @source "./components/sections/TrustIndicators.tsx";
 @source "./components/sections/FeaturedProjects.tsx";
+@source "./components/sections/Services.tsx";
 @source "./components/sections/WorkProcess.tsx";
+@source "./components/sections/Testimonials.tsx";
 @source "./components/sections/FinalCta.tsx";
 @source "./components/layout/Footer.tsx";
 @source "./components/ui/ProjectCard.tsx";
+@source "./components/ui/ServiceCard.tsx";
+@source "./components/ui/TestimonialCard.tsx";
 @source "./components/ui/Button.tsx";
 @source "./components/ui/TrustIcon.tsx";
 @source "./components/ui/ScrollIndicator.tsx";
 @source "./components/ui/CountUpStat.tsx";
-@source "./hooks/useCountUp.ts";
+@source "./components/sections/QuoteHero.tsx";
+@source "./components/sections/QuoteForm.tsx";
+@source "./components/ui/FormField.tsx";
+@source "./pages/HomePage.tsx";
+@source "./pages/QuotePage.tsx";
 
 @theme {
   --color-bg: #0a0a0a;
@@ -98,6 +106,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -121,15 +130,37 @@ body {
 }
 
 .hero-image {
+  --hero-scale: 1.02;
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: 58% center;
+  object-fit: cover;
+  object-position: 70% 50%;
+  transform-origin: 70% 50%;
   will-change: transform;
-  filter: brightness(1.04) contrast(1.04) saturate(1.05);
   transition: opacity 1s var(--ease-premium);
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    --hero-scale: 1.04;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-image {
+    object-position: 72% 42%;
+    transform-origin: 72% 42%;
+  }
+}
+
+.trust-indicators-panel {
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .hero-grain {
@@ -137,6 +168,28 @@ body {
   opacity: 0.035;
   mix-blend-mode: overlay;
   pointer-events: none;
+}
+
+.hero-headline-shadow {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.18),
+    0 6px 36px rgba(0, 0, 0, 0.32),
+    0 20px 56px rgba(0, 0, 0, 0.22);
+}
+
+.hero-subtitle-shadow {
+  color: rgba(255, 251, 246, 0.93);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 4px 28px rgba(0, 0, 0, 0.36),
+    0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-description-text {
+  color: rgba(245, 242, 236, 0.9);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.22),
+    0 4px 24px rgba(0, 0, 0, 0.28);
 }
 
 .scroll-mouse {

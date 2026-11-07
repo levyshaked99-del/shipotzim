@@ -5,9 +5,10 @@ interface ScrollIndicatorProps {
 export function ScrollIndicator({ visible }: ScrollIndicatorProps) {
   return (
     <div
-      className={`pointer-events-none absolute bottom-[148px] left-1/2 z-10 -translate-x-1/2 transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:bottom-[156px] ${
+      className={`pointer-events-none absolute bottom-[148px] left-1/2 z-10 hidden -translate-x-1/2 transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] lg:block ${
         visible ? 'opacity-[0.35]' : 'opacity-0'
       }`}
+      style={{ bottom: '156px' }}
       aria-hidden="true"
     >
       <div className="scroll-mouse flex flex-col items-center gap-2">

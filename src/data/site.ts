@@ -8,12 +8,14 @@ export const COMPANY = {
 } as const
 
 export const NAV_ITEMS = [
-  { label: 'פרויקטים', href: '#projects' },
-  { label: 'שירותים', href: '#services' },
-  { label: 'תהליך עבודה', href: '#process' },
-  { label: 'המלצות', href: '#testimonials' },
-  { label: 'צור קשר', href: '#contact' },
+  { label: 'פרויקטים', href: '/#projects' },
+  { label: 'שירותים', href: '/#services' },
+  { label: 'תהליך עבודה', href: '/#process' },
+  { label: 'המלצות', href: '/#testimonials' },
+  { label: 'צור קשר', href: '/#contact' },
 ] as const
+
+export const QUOTE_ROUTE = '/quote' as const
 
 export const HERO = {
   eyebrow: 'בנייה יוקרתית · שיפוצים · עבודות גמר',
@@ -31,7 +33,7 @@ export const TRUST_STATS = [
   { value: '100%', label: 'עמידה בזמנים', icon: 'timeline' as const },
 ] as const
 
-export const HERO_IMAGE = '/images/hero.png'
+export const HERO_IMAGE = '/images/avni-hero.png'
 
 export const FEATURED_PROJECTS = {
   title: 'פרויקטים נבחרים',
@@ -69,6 +71,57 @@ export const PROJECTS = [
     href: '#projects',
   },
 ] as const
+
+export const SERVICES = {
+  eyebrow: 'מה אנחנו מציעים',
+  title: 'השירותים שלנו',
+  subtitle: 'פתרונות בנייה, שיפוץ וניהול פרויקטים ברמת ביצוע גבוהה.',
+  items: [
+    {
+      id: 'luxury-build',
+      title: 'בנייה יוקרתית',
+      description: 'פרויקטי מגורים ובנייה בסטנדרט גבוה.',
+    },
+    {
+      id: 'full-renovation',
+      title: 'שיפוצים מקיפים',
+      description: 'שדרוג מלא של נכסים פרטיים ומסחריים.',
+    },
+    {
+      id: 'planning',
+      title: 'תכנון וליווי מקצועי',
+      description: 'ליווי צמוד משלב הרעיון ועד תחילת הביצוע.',
+    },
+    {
+      id: 'project-management',
+      title: 'ניהול פרויקט עד מפתח',
+      description: 'ניהול מלא של כל בעלי המקצוע והתהליך.',
+    },
+  ],
+} as const
+
+export const TESTIMONIALS = {
+  eyebrow: 'המלצות',
+  title: 'לקוחות ממליצים',
+  subtitle: 'מה הלקוחות שלנו אומרים על העבודה איתנו.',
+  items: [
+    {
+      id: 'cohen',
+      quote: 'העבודה הייתה מקצועית, מסודרת וברמה גבוהה מאוד.',
+      author: 'משפחת כהן',
+    },
+    {
+      id: 'levy',
+      quote: 'עמדו בלוחות הזמנים וסיפקו תוצאה מצוינת.',
+      author: 'יובל לוי',
+    },
+    {
+      id: 'abraham',
+      quote: 'ליווי אישי מהתכנון ועד המסירה.',
+      author: 'דנה אברהם',
+    },
+  ],
+} as const
 
 export const WORK_PROCESS = {
   title: 'תהליך העבודה',
@@ -110,4 +163,40 @@ export const FINAL_CTA = {
 export const FOOTER = {
   brand: 'אבני | בנייה • שיפוצים • גמר',
   copyright: '© 2026 AVNEY',
+} as const
+
+export const QUOTE = {
+  title: 'בואו נדבר על הפרויקט שלכם.',
+  subtitle: 'ספרו לנו על הפרויקט ואנו נחזור אליכם עם הצעת מחיר מותאמת.',
+  submitCta: 'שליחת בקשה להצעת מחיר',
+  successTitle: 'תודה!',
+  successMessage: 'קיבלנו את הפרטים וניצור קשר בהקדם.',
+  descriptionPlaceholder: 'ספרו לנו על הפרויקט, המטרות והחזון שלכם.',
+  projectTypes: [
+    { value: 'new-build', label: 'בנייה חדשה' },
+    { value: 'full-renovation', label: 'שיפוץ מלא' },
+    { value: 'partial-renovation', label: 'שיפוץ חלקי' },
+    { value: 'planning', label: 'תכנון וליווי' },
+    { value: 'other', label: 'אחר' },
+  ],
+  budgetRanges: [
+    { value: 'under-100k', label: 'עד 100,000 ₪' },
+    { value: '100k-300k', label: '100,000–300,000 ₪' },
+    { value: '300k-700k', label: '300,000–700,000 ₪' },
+    { value: '700k-plus', label: '700,000 ₪+' },
+  ],
+  trustItems: [
+    'ליווי אישי לאורך כל הדרך',
+    'שקיפות מלאה בתהליך העבודה',
+    'סטנדרט ביצוע ללא פשרות',
+  ],
+  labels: {
+    fullName: 'שם מלא',
+    phone: 'טלפון',
+    email: 'אימייל',
+    city: 'עיר',
+    projectType: 'סוג הפרויקט',
+    budget: 'טווח תקציב',
+    description: 'תיאור הפרויקט',
+  },
 } as const
