@@ -17,7 +17,7 @@ export function TrustIndicators() {
                 index > 0 ? 'lg:border-l lg:border-white/[0.06]' : ''
               }`}
             >
-              <div className="group flex w-full min-w-0 flex-col items-center justify-center gap-1.5 px-3 py-4 text-center transition-[background-color] duration-300 hover:bg-white/[0.03] sm:gap-2.5 sm:px-5 sm:py-6 lg:gap-3 lg:px-12 lg:py-9">
+              <div className="group flex w-full min-w-0 flex-col items-center justify-center gap-2 px-3 py-5 text-center transition-[background-color] duration-300 hover:bg-white/[0.03] sm:gap-2.5 sm:px-5 sm:py-6 lg:gap-3 lg:px-12 lg:py-9">
                 <div className="flex h-4 items-center justify-center sm:h-5">
                   <TrustIcon
                     type={stat.icon}
@@ -29,7 +29,7 @@ export function TrustIndicators() {
                   animate={isVisible}
                   className="font-display text-[1.625rem] font-extralight tracking-tight text-text sm:text-3xl lg:text-4xl"
                 />
-                <span className="text-[0.5625rem] font-light leading-snug tracking-[0.12em] text-muted/80 sm:text-[0.625rem] sm:tracking-[0.14em] lg:text-[0.6875rem]">
+                <span className="text-xs font-light leading-snug tracking-[0.1em] text-muted/85 sm:text-[0.6875rem] sm:tracking-[0.12em]">
                   {stat.label}
                 </span>
               </div>

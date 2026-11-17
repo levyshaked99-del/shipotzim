@@ -56,7 +56,7 @@ export function Hero() {
       <div className="relative z-10 flex flex-1 flex-col justify-end pb-0 pt-[92px] sm:pt-[108px] lg:pt-[140px]">
         <div
           dir="rtl"
-          className="hero-content pointer-events-auto absolute bottom-[4.5rem] left-5 flex w-[calc(100%-40px)] flex-col items-stretch text-right sm:bottom-[5rem] md:left-[5%] md:w-[min(420px,calc(100%-10%))] md:max-w-[420px] lg:bottom-[5.5rem] lg:left-[7.5%] lg:w-[480px] lg:max-w-[480px]"
+          className="hero-content pointer-events-auto absolute bottom-[5.75rem] left-5 flex w-[calc(100%-40px)] flex-col items-stretch text-right sm:bottom-[6rem] md:left-[5%] md:w-[min(420px,calc(100%-10%))] md:max-w-[420px] lg:bottom-[5.5rem] lg:left-[7.5%] lg:w-[480px] lg:max-w-[480px]"
         >
           <div
             className="pointer-events-none absolute -bottom-6 -left-5 -right-2 -top-10 bg-[radial-gradient(ellipse_at_15%_55%,rgba(0,0,0,0.52)_0%,rgba(0,0,0,0.22)_42%,transparent_72%)] sm:-left-8 sm:-right-4 lg:-left-12 lg:-right-16 lg:bg-[radial-gradient(ellipse_at_8%_50%,rgba(0,0,0,0.48)_0%,rgba(0,0,0,0.18)_45%,transparent_70%)]"
@@ -64,7 +64,7 @@ export function Hero() {
           />
 
           <p
-            className={`relative m-0 mb-3 w-full text-center text-[0.6rem] font-light tracking-[0.26em] text-text uppercase transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:text-[0.65rem] lg:text-[0.7rem] ${
+            className={`relative m-0 mb-3 w-full text-center text-xs font-light tracking-[0.2em] text-text uppercase transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] sm:text-[0.8125rem] sm:tracking-[0.22em] lg:text-[0.7rem] lg:tracking-[0.26em] ${
               loaded ? 'opacity-100' : 'opacity-0'
             }`}
             style={{ transitionDelay: '200ms' }}
