@@ -21,7 +21,7 @@ export function Navbar() {
         >
           <Link
             to="/"
-            className="group flex shrink-0 flex-col justify-center gap-0.5"
+            className="group flex min-h-[44px] shrink-0 flex-col justify-center gap-0.5 py-2 pe-2"
             aria-label={`${COMPANY.name} — דף הבית`}
           >
             <span className="font-brand text-[1.2rem] font-light leading-none tracking-[0.32em] text-text sm:text-[1.5rem] sm:tracking-[0.35em]">
@@ -59,7 +59,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="relative flex h-10 w-10 shrink-0 items-center justify-center text-text sm:h-11 sm:w-11"
+            className="relative flex h-11 w-11 min-h-[44px] min-w-[44px] shrink-0 items-center justify-center text-text xl:hidden"
             onClick={() => setMenuOpen(true)}
             aria-label="פתח תפריט"
             aria-expanded={menuOpen}

@@ -18,7 +18,7 @@ export function Footer() {
           <div className="mt-6 flex flex-col items-center gap-2.5 sm:flex-row sm:gap-8">
             <a
               href={COMPANY.phoneHref}
-              className="text-[0.8125rem] font-light tracking-wide text-muted transition-colors duration-300 hover:text-gold"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-3 text-sm font-light tracking-wide text-muted transition-colors duration-300 hover:text-gold"
               dir="ltr"
             >
               {COMPANY.phone}
@@ -26,7 +26,7 @@ export function Footer() {
             <span className="hidden h-3 w-px bg-white/10 sm:block" aria-hidden="true" />
             <a
               href={COMPANY.emailHref}
-              className="text-[0.8125rem] font-light tracking-wide text-muted transition-colors duration-300 hover:text-gold"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-3 text-sm font-light tracking-wide text-muted transition-colors duration-300 hover:text-gold"
               dir="ltr"
             >
               {COMPANY.email}
