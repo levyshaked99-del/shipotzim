@@ -82,7 +82,7 @@ export function Hero() {
 
           <h1 className="relative m-0 w-full p-0 text-right font-display font-black leading-[1.05] tracking-[-0.02em] text-text">
             <span
-              className={`hero-headline-shadow block w-full text-right text-[clamp(1.5rem,6.2vw,5.5rem)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:text-[clamp(2.05rem,7.4vw,5.75rem)] ${
+              className={`hero-headline-shadow block w-full text-right text-[clamp(1.85rem,7.8vw,5.5rem)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:text-[clamp(2.05rem,7.4vw,5.75rem)] ${
                 loaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}
               style={{ transitionDelay: `${HEADLINE_MAIN_DELAYS[0]}ms` }}
@@ -90,7 +90,7 @@ export function Hero() {
               {headlinePrimary}
             </span>
             <span
-              className={`hero-headline-shadow block w-full text-right text-[clamp(1.5rem,6.2vw,5.5rem)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:text-[clamp(2.05rem,7.4vw,5.75rem)] ${
+              className={`hero-headline-shadow block w-full text-right text-[clamp(1.85rem,7.8vw,5.5rem)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:text-[clamp(2.05rem,7.4vw,5.75rem)] ${
                 loaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}
               style={{ transitionDelay: `${HEADLINE_MAIN_DELAYS[1]}ms` }}
