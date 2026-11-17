@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { FloatingContactFab } from '../components/layout/FloatingContactFab'
 import { Footer } from '../components/layout/Footer'
 import { Navbar } from '../components/layout/Navbar'
 import { QuoteForm } from '../components/sections/QuoteForm'
@@ -21,6 +22,7 @@ export function QuotePage() {
         <QuoteForm />
       </main>
       <Footer />
+      <FloatingContactFab />
     </div>
   )
 }

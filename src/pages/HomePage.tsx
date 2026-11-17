@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { FloatingContactFab } from '../components/layout/FloatingContactFab'
 import { Footer } from '../components/layout/Footer'
 import { Navbar } from '../components/layout/Navbar'
 import { FeaturedProjects } from '../components/sections/FeaturedProjects'
@@ -33,6 +34,7 @@ export function HomePage() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatingContactFab />
     </div>
   )
 }
