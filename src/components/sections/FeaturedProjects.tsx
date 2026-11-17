@@ -20,7 +20,7 @@ export function FeaturedProjects() {
         >
           <div className="mb-4 flex items-center gap-4 sm:mb-6">
             <span className="h-px w-10 bg-gold/60" />
-            <span className="text-[0.65rem] font-light tracking-[0.28em] text-gold/80 uppercase">
+            <span className="text-xs font-light tracking-[0.22em] text-gold/80 uppercase lg:text-[0.65rem] lg:tracking-[0.28em]">
               תיק עבודות
             </span>
           </div>
@@ -37,7 +37,29 @@ export function FeaturedProjects() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
+        <div
+          className={`projects-snap-rail -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-5 pb-1 md:hidden ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+          aria-label="גלילת פרויקטים"
+        >
+          {PROJECTS.map((project) => (
+            <div
+              key={`mobile-${project.id}`}
+              className="w-[min(88vw,360px)] shrink-0 snap-center"
+            >
+              <ProjectCard
+                name={project.name}
+                location={project.location}
+                area={project.area}
+                image={project.image}
+                href={project.href}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden grid-cols-1 gap-8 sm:gap-10 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
           {PROJECTS.map((project, index) => (
             <div
               key={project.id}

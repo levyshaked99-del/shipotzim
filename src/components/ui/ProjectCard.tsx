@@ -26,7 +26,7 @@ export function ProjectCard({ name, location, area, image, href }: ProjectCardPr
         <div className="relative -mt-20 px-5 pb-6 pt-14 sm:-mt-24 sm:px-7 sm:pb-9 sm:pt-16">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-gold/70 transition-all duration-500 group-hover:w-12" />
-            <span className="text-[0.65rem] font-light tracking-[0.2em] text-gold/80 uppercase">
+            <span className="text-xs font-light tracking-[0.16em] text-gold/80 uppercase sm:text-[0.65rem] sm:tracking-[0.2em]">
               {area}
             </span>
           </div>

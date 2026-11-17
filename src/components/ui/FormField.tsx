@@ -3,7 +3,8 @@ import type { InputHTMLAttributes, SelectHTMLAttributes, TextareaHTMLAttributes 
 const fieldClassName =
   'w-full min-h-[48px] border border-white/[0.1] bg-white/[0.025] px-4 py-3.5 text-sm font-light text-text placeholder:text-muted/45 transition-[border-color,background-color,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus:border-gold/40 focus:bg-white/[0.035] focus:outline-none focus:ring-1 focus:ring-gold/20'
 
-const labelClassName = 'mb-2 block text-[0.6875rem] font-light tracking-[0.12em] text-muted/85'
+const labelClassName =
+  'mb-2 block text-xs font-light tracking-[0.1em] text-muted/90 sm:text-[0.8125rem] sm:tracking-[0.12em]'
 
 interface FormFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string

@@ -19,7 +19,7 @@ export function WorkProcess() {
         >
           <div className="mb-4 flex items-center gap-4 sm:mb-5">
             <span className="h-px w-10 bg-gold/60" />
-            <span className="text-[0.65rem] font-light tracking-[0.28em] text-gold/80 uppercase">
+            <span className="text-xs font-light tracking-[0.22em] text-gold/80 uppercase lg:text-[0.65rem] lg:tracking-[0.28em]">
               איך אנחנו עובדים
             </span>
           </div>

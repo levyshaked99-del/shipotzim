@@ -23,6 +23,7 @@ export function QuoteForm() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    // TODO: Wire submission — POST to API, email service, or CRM; handle errors and analytics.
     setSubmitted(true)
   }
 
